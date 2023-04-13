@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="h-screen" style="background-image:url(./assets/background/check.jpg);"  >
+        <div class="w-full h-20 flex py-2 pl-4 justify-between"> 
+            <p id="userId" class=" pl-3 w-16 text-center text-2xl text-zinc-700 font-bold flex mt-8">Citi-<span class="text-yellow-600 font-extrabold ">Lodge</span></p>
+            <ul class="flex justify-between space-x-8 mr-8 px-2 items-center text-white font-semibold text-base">
+                <button class=" relative group hover:underline  ">
+                    <p>Our Rooms</p>
+                    <div class="absolute bg-slate-200 text-black hidden top-full w-max shadow-lg mt-2 group-focus:block">
+                        <ul class="border rounded">
+                            <li id="standard" class="px-8 py-2  border-2 border-b-black">Standard </li>
+                            <li id="Executive" class="px-8 py-2 border-2 border-b-black">Executive Room</li>
+                            <li id="suite" class="px-8 py-2 ">Deluxe Suite</li>
+                        </ul>
+                </button>
+                <li class="hover:underline"><a href="#">Events</a></li>
+                <li class="hover:underline"><a href="#">Contact</a></li>
+                <button class=" relative px-6 py-2 border-2 rounded-full group">
+                    <p>Sign-In</p>
+                    <div id="signInCon" class="absolute bg-slate-200 text-black hidden top-full min-w-full -left-64 w-max shadow-lg mt-2 group-focus-within:block">
+                        <form id="form1" class=" w-96 p-6 shadow-lg bg-white rounded-md h-auto">
+                            <h1 class="text-center">Login</h1>
+                            <hr class="mt-3">
+                            <div class="mt-3">
+                                <label for="username" class="block text-base mb-2">Username</label>
+                                <input id="username" type="text" class="border w-full text-base px-2 py-1 focus:ring-0 focus:border-gray-600" placeholder="Enter Username...">
+                            </div>
+                            <div class="mt-3">
+                                <label for="password" class="block text-base mb-2">Password</label>
+                                <input id="password" type="password" class="border w-full text-base px-2 py-1 focus:ring-0 focus:border-gray-600" placeholder="Enter password...">
+                            </div>
+                            <div class="mt-3 flex justify-between items-center">
+                                <div>
+                                    <input type="checkbox" >
+                                    <label>Remember Me</label>
+                                </div>
+                                <div>
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div>
+                                <input id="login" type="submit" class=" w-full mt-4 border-2 text-white bg-black py-1 rounded-md hover:bg-transparent hover:text-black  ">
+                            </div>
+                            
+                                
+                            
+                        </form>
+                    </div>
+                </button>
+            </ul>     
+        </div> 
+
+         <div id="dashboard" class="flex flex-row h-full w-full"> 
+                <div class=" w-80 border-r-2 p-5 h-full text-white mt-16 font-semibold" >
+                    <p id="rooms" class="text-lg cursor-pointer border-b-2 border-white p-2">Rooms</p>
+                    <p id="reservation" class="text-lg cursor-pointer border-b-2 border-white p-2">Reservation</p>
+                    <p id="staff" class="text-lg cursor-pointer border-b-2 border-white p-2">Staff</p>
+                    <p id="account" class="text-lg cursor-pointer border-b-2 border-white p-2">Account</p>   
+                </div>
+                <div id="display" class="w-full flex-col">
+                    <div class="w-full h-10 flex justify-between bg-slate-200">
+                        <h2 id="initial" class="border-2 border-red-400 rounded-full h-10 w-10 ml-2 text-black font-bold text-center pt-1">OS</h2>
+                        <input id="search" type="search" placeholder="Search" class="rounded-md h-10 pl-4 ml-2 outline-none">
+                        <button id="btnAdd" class="h-10 w-16 rounded-sm bg-blue-900 text-white text-center  hover:bg-blue-200 ">+</button>
+                    </div>
+                    <div id="room-gallery" class="p-10 grid sm:grid-cols-1 gap-10 md:grid-cols-3 bg-slate-100 w-full h-full">
+                        <img src="./assets/execut/exe3.jpg" alt="">
+                        <img src="./assets/suite/del4.jpg" alt="">
+                        <img src="./assets/suite/del6.jpg" alt="">
+                        <img src="./assets/execut/exe4.jpg" alt="">
+                    
+                        <!-- <div class="bg-black"></div>
+                        <div class="bg-red-400"></div>
+                        <div class=" bg-blue-800"></div>
+                        <div class="bg-green-400"></div>
+                        <div></div> -->
+                    </div>
+                </div>                
+        </div>
+        
+        
+    </section>
+
+
+
+
+
+
+
+
+        <!-- <div class=" w-96 p-6 shadow-lg bg-white rounded-md h-auto">
+            <h1 class="text-center">Login</h1>
+            <hr class="mt-3">
+            <div class="mt-3">
+                <label for="username" class="block text-base mb-2">Username</label>
+                <input id="username" type="text" class="border w-full text-base px-2 py-1 focus:ring-0 focus:border-gray-600" placeholder="Enter Username...">
+            </div>
+            <div class="mt-3">
+                <label for="password" class="block text-base mb-2">Password</label>
+                <input id="password" type="password" class="border w-full text-base px-2 py-1 focus:ring-0 focus:border-gray-600" placeholder="Enter password...">
+            </div>
+            <div class="mt-3 flex justify-between items-center">
+                <div>
+                    <input type="checkbox" >
+                    <label>Remember Me</label>
+                </div>
+                <div>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class=" mt-4 border-2 text-white bg-black py-1 w-full rounded-md hover:bg-transparent hover:text-black  ">Login</button>
+            </div>
+        </div> -->
+
+        <script src="./hotel.js"></script>
+</body>
+</html>
